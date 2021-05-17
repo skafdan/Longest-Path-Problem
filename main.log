@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Arch Linux) (preloaded format=xelatex 2021.4.29)  16 MAY 2021 17:11
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Arch Linux) (preloaded format=xelatex 2021.4.29)  18 MAY 2021 11:29
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -538,19 +538,22 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 29.
  (/usr/share/texmf-dist/tex/generic/stringenc/se-ascii-print.def
 File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
-) [1
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 34.
+ [1
 
 ] (/home/dan/Documents/S1_2021/cosc341/ass3/main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: DD688CE74B1C17329B5306B3619E9832;61.
+(rerunfilecheck)             Checksum: 3550CB9296B65F4800DAFA8C485EF093;121.
  ) 
 Here is how much of TeX's memory you used:
- 15252 strings out of 477299
- 221258 string characters out of 5838338
- 578554 words of memory out of 5000000
- 34598 multiletter control sequences out of 15000+600000
- 449075 words of font info for 67 fonts, out of 8000000 for 9000
+ 15264 strings out of 477299
+ 221440 string characters out of 5838338
+ 581635 words of memory out of 5000000
+ 34609 multiletter control sequences out of 15000+600000
+ 459446 words of font info for 75 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  94i,6n,98p,1045b,321s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on /home/dan/Documents/S1_2021/cosc341/ass3/main.xdv (1 page, 1532 bytes).
+Output written on /home/dan/Documents/S1_2021/cosc341/ass3/main.xdv (1 page, 3532 bytes).

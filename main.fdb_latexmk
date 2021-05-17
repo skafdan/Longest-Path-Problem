@@ -1,11 +1,11 @@
 # Fdb version 3
-["xdvipdfmx"] 1621141903 "/home/dan/Documents/S1_2021/cosc341/ass3/main.xdv" "/home/dan/Documents/S1_2021/cosc341/ass3/main.pdf" "/home/dan/Documents/S1_2021/cosc341/ass3/main" 1621141903
-  "/home/dan/Documents/S1_2021/cosc341/ass3/main.xdv" 1621141903 1532 2feaea178e69573192f598d2f1f63e45 "xelatex"
+["xdvipdfmx"] 1621294174 "/home/dan/Documents/S1_2021/cosc341/ass3/main.xdv" "/home/dan/Documents/S1_2021/cosc341/ass3/main.pdf" "/home/dan/Documents/S1_2021/cosc341/ass3/main" 1621294174
+  "/home/dan/Documents/S1_2021/cosc341/ass3/main.xdv" 1621294174 3532 955dfeea581d279e84c4cff67ee24b1c "xelatex"
   (generated)
   "/home/dan/Documents/S1_2021/cosc341/ass3/main.pdf"
-["xelatex"] 1621141902 "/home/dan/Documents/S1_2021/cosc341/ass3/main.tex" "/home/dan/Documents/S1_2021/cosc341/ass3/main.xdv" "main" 1621141903
-  "/home/dan/Documents/S1_2021/cosc341/ass3/main.aux" 1621141903 838 278f9f0a01c98b129d575e3da31e054d ""
-  "/home/dan/Documents/S1_2021/cosc341/ass3/main.tex" 1621141902 700 1b4401fdcf9efb18012040b70a8a5cbd ""
+["xelatex"] 1621294173 "/home/dan/Documents/S1_2021/cosc341/ass3/main.tex" "/home/dan/Documents/S1_2021/cosc341/ass3/main.xdv" "main" 1621294174
+  "/home/dan/Documents/S1_2021/cosc341/ass3/main.aux" 1621294174 956 cb184e0e121c0e42da4792089c4e97c3 ""
+  "/home/dan/Documents/S1_2021/cosc341/ass3/main.tex" 1621294173 1604 13deb4a190a88a1fdebe687792cffc6e ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1616952564 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1616952564 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1616952564 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -37,6 +37,7 @@
   "/usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmr6.tfm" 1616952564 11836 e3b6ce3e601aec94f64a536e7f4224d5 ""
   "/usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmr7.tfm" 1616952564 11852 5a9022f105fd1ee2797df861e79ae9a0 ""
   "/usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmr8.tfm" 1616952564 11864 309fd7f43e4a0ba39f6f7644d76e8edf ""
+  "/usr/share/texmf-dist/fonts/tfm/public/lm/ts1-lmr10.tfm" 1616952564 1556 b86d923e6b2f9aab2e313098a95cb0b8 ""
   "/usr/share/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1616952564 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "/usr/share/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty" 1616952564 40635 c40361e206be584d448876bba8a64a3b ""
   "/usr/share/texmf-dist/tex/generic/bitset/bitset.sty" 1616952564 33961 6b5c75130e435b2bfdb9f480a09a39f9 ""
@@ -140,13 +141,13 @@
   "/usr/share/texmf-dist/tex/latex/xkeyval/xkeyval.sty" 1616952564 4902 efb3d66683a2da2a232f71e3a571a899 ""
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1616952564 33301 a3134070eacafb10b1f371612ce2650d ""
   "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1619666136 5313617 ed11989d045e0723670f8a62c6458196 ""
-  "main.aux" 1621141903 838 278f9f0a01c98b129d575e3da31e054d "xelatex"
-  "main.out" 1621141903 61 dd688ce74b1c17329b5306b3619e9832 "xelatex"
-  "main.tex" 1621141902 700 1b4401fdcf9efb18012040b70a8a5cbd ""
+  "main.aux" 1621294174 956 cb184e0e121c0e42da4792089c4e97c3 "xelatex"
+  "main.out" 1621294174 121 3550cb9296b65f4800dafa8c485ef093 "xelatex"
+  "main.tex" 1621294173 1604 13deb4a190a88a1fdebe687792cffc6e ""
   (generated)
-  "/home/dan/Documents/S1_2021/cosc341/ass3/main.xdv"
   "main.xdv"
-  "main.log"
   "/home/dan/Documents/S1_2021/cosc341/ass3/main.log"
-  "main.aux"
   "main.out"
+  "main.log"
+  "/home/dan/Documents/S1_2021/cosc341/ass3/main.xdv"
+  "main.aux"

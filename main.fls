@@ -936,6 +936,14 @@ INPUT /usr/share/texmf-dist/tex/generic/stringenc/se-ascii-print.def
 INPUT /usr/share/texmf-dist/tex/generic/stringenc/se-ascii-print.def
 INPUT /usr/share/texmf-dist/tex/generic/stringenc/se-ascii-print.def
 INPUT /usr/share/texmf-dist/tex/generic/stringenc/se-ascii-print.def
+INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ec-lmbx10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmr10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/lmmi10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/lmsy10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ts1-lmr10.tfm
 OUTPUT /home/dan/Documents/S1_2021/cosc341/ass3/main.xdv
 INPUT /home/dan/Documents/S1_2021/cosc341/ass3/main.aux
 INPUT /home/dan/Documents/S1_2021/cosc341/ass3/main.out
