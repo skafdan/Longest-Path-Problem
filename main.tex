@@ -50,12 +50,32 @@ The graph is undirected and all edges weights are assumed to be $1$.
         edge $e\:=\left(v_i,v_{i+1}\right)\:\in E$
         \item No node appears more than once in the sequence.
     \end{itemize}
-The figure below shows the longest simple path in blue of a graph.
-\begin{figure}[!h]
-    \centering \tikzfig{tikz/longestPathIntro}
-    \caption{Longest simple path of a graph}
-\end{figure}
+    \pagebreak
 
+    \subsection{Longest-simple path and Decision version}
+    The figure below shows the longest simple path, in blue, of a graph.
+    \begin{figure}[!h]
+        \centering \tikzfig{tikz/longestPathIntro}
+        \caption{Longest simple path of a graph}
+    \end{figure}
 
+    The decision version of the Longest path problem, yes or no version; 
+    input a graph, $G$, and integer $k$ outputs a yes or no if a simplest path 
+    of at least length, $k$, exists in the graph.
+    \subsection{NP}
+    A problem is in NP if we can verify the solution in polynomial time. A 
+    corresponding certificate can be produced from the decision version of the 
+    Longest path problem if we can verify this certificate in polynomial time 
+    then Longest path problem is in $NP$. The certificate is a path at least of 
+    length $k$ with no duplicate nodes.\\ 
+    To check that the path has no duplicate 
+    nodes we can itterate over each node in the path for every node, $O(k^2)$ 
+    complexity. 
+    \\To check the length of the path we just need to count each node
+    and check it is greater than or equal to $k$ with a $O(k)$ complexity. 
+    \\In some impletations like most programming lanuages getting the length of 
+    a list is constant complexity $O(1)$, in most cases and the worst 
+    case we can check a certificate with $O(n^2)$ complexity, therefore the
+    Longest path problem is in $NP$.
 
 \end{document}
