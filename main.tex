@@ -16,6 +16,8 @@
 \usepackage{hyperref}
 \usepackage{glossaries}
 \usepackage{parskip}
+\usepackage{tikzit}
+\input{tikz/style.tikzstyles}
 
 \title{Cosc341 - Assignment 3}
 \author{Dan Skaf, Elijah Passmore, Tom Berg}
@@ -34,20 +36,25 @@ The \textbf{Longest path problem} is a problem for finding the maximum length
 Simple-path in a graph, $G(V,E)$ with $\left|V\right|=n\::\:n\:\in\:\mathbb{N}$.
 The graph is undirected and all edges weights are assumed to be $1$.
 
-\subsection{Simple-path} 
-Suppose in our graph, $G(V,E)$, we want the Simple-path between two vertices 
-$s$ and $t$. The Simplest-path is a path between any two nodes in the graph that 
-does not go over the same node twice, and for two consecutive nodes there is a 
-path between them.
+    \subsection{Simple-path} 
+    Suppose in our graph, $G(V,E)$, we want the Simple-path between two vertices 
+    $s$ and $t$. The Simplest-path is a path between any two nodes in the graph 
+    that does not go over the same node twice, and for two consecutive nodes 
+    there is a path between them.
 
-As such a simple path between two nodes $s,t\in V$ is the sequence of vertices 
-($v_1$,$v_2$,$v_3$,$....$,$v_k$) that satifisy these conditions:
-\begin{itemize}
-    \item $s\:=v_1$ and $t\:=\:v_k$
-    \item Each consecutive nodes $\left(v_i,v_{i+1}\right)$ there is an 
-    edge $e\:=\left(v_i,v_{i+1}\right)\:\in E$
-    \item No node appears more than once in the sequence.
-\end{itemize}
+    As such a simple path between two nodes $s,t\in V$ is the sequence of 
+    vertices ($v_1$,$v_2$,$v_3$,$....$,$v_k$) that satifisy these conditions:
+    \begin{itemize}
+        \item $s\:=v_1$ and $t\:=\:v_k$
+        \item Each consecutive nodes $\left(v_i,v_{i+1}\right)$ there is an 
+        edge $e\:=\left(v_i,v_{i+1}\right)\:\in E$
+        \item No node appears more than once in the sequence.
+    \end{itemize}
+The figure below shows the longest simple path in blue of a graph.
+\begin{figure}[!h]
+    \centering \tikzfig{tikz/longestPathIntro}
+    \caption{Longest simple path of a graph}
+\end{figure}
 
 
 
