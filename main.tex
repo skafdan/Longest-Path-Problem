@@ -32,7 +32,7 @@ This report introduces the \textbf{Longest Path problem} and proves it is $NP$-c
 \end{abstract}
 
 \section{Longest Path problem}
-The \textbf{Longest path problem} is a problem for finding the maximum length 
+The \textbf{Longest path problem} is the problem for finding the maximum length 
 Simple-path in a graph, $G(V,E)$ with $\left|V\right|=n\::\:n\:\in\:\mathbb{N}$.
 The graph is undirected and all edges weights are assumed to be $1$.
 
@@ -59,23 +59,36 @@ The graph is undirected and all edges weights are assumed to be $1$.
         \caption{Longest simple path of a graph}
     \end{figure}
 
-    The decision version of the Longest path problem, yes or no version; 
-    input a graph, $G$, and integer $k$ outputs a yes or no if a simplest path 
-    of at least length, $k$, exists in the graph.
+    In the decision version of the Longest path problem, yes or no version; 
+    we input a graph, $G$, and an integer $k$ and outputs a yes or no if a 
+    simplest path of at least length, $k$, exists in the graph.
     \subsection{NP}
     A problem is in NP if we can verify the solution in polynomial time. A 
     corresponding certificate can be produced from the decision version of the 
-    Longest path problem if we can verify this certificate in polynomial time 
+    Longest path problem. If we can verify this certificate in polynomial time 
     then Longest path problem is in $NP$. The certificate is a path at least of 
     length $k$ with no duplicate nodes.\\ 
-    To check that the path has no duplicate 
-    nodes we can itterate over each node in the path for every node, $O(k^2)$ 
-    complexity. 
+    To check that the path has no duplicate nodes we can itterate over each node
+     in the path for every node, $O(k^2)$ complexity. 
     \\To check the length of the path we just need to count each node
-    and check it is greater than or equal to $k$ with a $O(k)$ complexity. 
+    and check it is greater than or equal to $k$, this opperation has a $O(k)$ 
+    complexity. 
     \\In some impletations like most programming lanuages getting the length of 
     a list is constant complexity $O(1)$, in most cases and the worst 
     case we can check a certificate with $O(n^2)$ complexity, therefore the
     Longest path problem is in $NP$.
+
+\section{NP-complete}
+If a problem, $X$, is in $NP$-complete and X polynomial reduces to another 
+problem $Y$ in NP, then Y is also in $NP$-complete.\\
+We have shown that the Longest path problem is $NP$, all thats left is to show 
+that another problem in $NP$-complete polynomial reduces to the Longest path 
+problem.
+\pagebreak
+\subsection{Hamiltonian path}
+A Hamiltonian path problem - Determining if a Hamiltonian path (a path which 
+visits every node in a graph once) exists in a graph, is a known $NP$-complete
+problem. It stands to show that the Hamiltonian path problem polynomial reduces 
+to the Longest path problem.
 
 \end{document}
