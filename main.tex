@@ -39,7 +39,7 @@ The graph is undirected and all edges weights are assumed to be $1$.
     there is a path between them.
 
     As such a simple path between two nodes $s,t\in V$ is the sequence of 
-    vertices ($v_1$,$v_2$,$v_3$,$....$,$v_k$) that satifisy these conditions:
+    vertices ($v_1$,$v_2$,$v_3$,$....$,$v_k$) that satisfy these conditions:
     \begin{itemize}
         \item $s\:=v_1$ and $t\:=\:v_k$
         \item Each consecutive nodes $\left(v_i,v_{i+1}\right)$ there is an 
@@ -63,12 +63,12 @@ The graph is undirected and all edges weights are assumed to be $1$.
     Longest path problem. If we can verify this certificate in polynomial time 
     then Longest path problem is in $NP$. The certificate is a path at least of 
     length $k$ with no duplicate nodes.\\ 
-    To check that the path has no duplicate nodes we can itterate over each node
+    To check that the path has no duplicate nodes we can iterate over each node
      in the path for every node, $O(k^2)$ complexity. 
     \\To check the length of the path we just need to count each node
-    and check it is greater than or equal to $k$, this opperation has a $O(k)$ 
+    and check it is greater than or equal to $k$, this operation has a $O(k)$ 
     complexity. 
-    \\In some impletations like most programming lanuages getting the length of 
+    \\In some implementations like most programming languages getting the length of 
     a list is constant complexity $O(1)$, in most cases and the worst 
     case we can check a certificate with $O(n^2)$ complexity, therefore the
     Longest path problem is in $NP$.
@@ -79,11 +79,9 @@ problem $Y$ in NP, then Y is also in $NP$-complete.\\
 We have shown that the Longest path problem is $NP$, all thats left is to show 
 that another problem in $NP$-complete polynomial reduces to the Longest path 
 problem.
-\pagebreak
 \subsection{Hamiltonian path}
 A Hamiltonian path problem - Determining if a Hamiltonian path (a path which 
 visits every node in a graph once) exists in a graph, is a known $NP$-complete
 problem. It stands to show that the Hamiltonian path problem polynomial reduces 
 to the Longest path problem.
-
 \end{document}
