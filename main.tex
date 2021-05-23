@@ -1,3 +1,6 @@
+% ---------------------------------------------------------------------------- %
+%                                   PREAMBLE                                   %
+% ---------------------------------------------------------------------------- %
 \documentclass[a4paper,11pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -13,115 +16,155 @@
 \usepackage{theorem}
 \usepackage{textcomp}
 \usepackage{listings}
-\usepackage{hyperref}
+\usepackage{bookmark}
 \usepackage{glossaries}
 \usepackage{parskip}
 \usepackage{tikzit}
 \input{tikz/style.tikzstyles}
 
-\title{Cosc341 - Assignment 3}
-\author{Dan Skaf, Elijah Passmore, Tom Berg}
+% ---------------------------------------------------------------------------- %
+%                                    CONTENT                                   %
+% ---------------------------------------------------------------------------- %
+\title{COSC341 - Assignment 3}
+\author{Tom Berg, Elijah J. Passmore, Dan Skaf}
 \date{\today}
 
 \begin{document}
 
 \maketitle
+\tableofcontents
 
-\section{Longest Path problem}
-The \textbf{Longest path problem} is the problem for finding the maximum length 
-Simple-path in a graph, $G(V,E)$ with $\left|V\right|=n\::\:n\:\in\:\mathbb{N}$.
-The graph is undirected and all edges weights are assumed to be $1$.
+% --------------------------- Longest Path Problem --------------------------- %
+\section{Longest Path Problem}
 
-    \subsection{Simple-path} 
-    Suppose in our graph, $G(V,E)$, we want the Simple-path between two vertices 
-    $s$ and $t$. The Simple-path is a path between any two nodes in the graph 
-    that does not go over the same node twice, and for two consecutive nodes 
-    there is a path between them.
+The \textbf{Longest Path Problem} is for finding the maximum length simple path
+in a graph, $G(V,E)$ with $\left|V\right|=n\::\:n\:\in\:\mathbb{N}$.  The graph
+is undirected and all edges weights are assumed to be $1$.
 
-    As such a simple path between two nodes $s,t\in V$ is the sequence of 
-    vertices ($v_1$,$v_2$,$v_3$,$....$,$v_k$) that satisfy these conditions:
-    \begin{itemize}
-        \item $s\:=v_1$ and $t\:=\:v_k$
-        \item Each consecutive nodes $\left(v_i,v_{i+1}\right)$ there is an 
-        edge $e\:=\left(v_i,v_{i+1}\right)\:\in E$
-        \item No node appears more than once in the sequence.
-    \end{itemize}
+\subsection{Simple Path}
 
-    \subsection{Longest-simple path and Decision version}
-    The figure below shows the longest simple path, in blue, of a graph.
-    \begin{figure}[!h]
-        \centering \tikzfig{tikz/longestPathIntro}
-        \caption{Longest simple path of a graph}
-    \end{figure}
+Suppose we want the \textbf{simple path} between two vertices $s$ and $t$.  A
+simple path is one which every node in the path is never visited more than once
+and that there is a path between two consecutive nodes.
 
-    In the decision version of the Longest path problem, yes or no version; 
-    we input a graph, $G$, and an integer $k$ and output a yes or no if a 
-    simplest path of \textbf{at least} length, $k$, exists in the graph.
-    \subsection{NP}
-    A problem is in NP if we can verify the solution in polynomial time. A 
-    corresponding certificate can be produced from the decision version of the 
-    Longest path problem. If we can verify this certificate in polynomial time 
-    then Longest path problem is in $NP$. The certificate is a path at least of 
-    length $k$ with no duplicate nodes.\\ 
-    To check that the path has no duplicate nodes we can iterate over each node
-     in the path for every node, $O(k^2)$ complexity. 
-    \\To check the length of the path we just need to count each node
-    and check it is greater than or equal to $k$, this operation has a $O(k)$ 
-    complexity. 
-    \\In some implementations like most programming languages getting the length of 
-    a list is constant complexity $O(1)$, in most cases and the worst 
-    case we can check a certificate with $O(n^2)$ complexity, therefore the
-    Longest path problem is in $NP$.
-
-\section{NP-complete}
-If a problem, $X$, is in $NP$-complete and X polynomial reduces to another 
-problem $Y$ in NP, then Y is also in $NP$-complete.\\
-We have shown that the Longest path problem is $NP$, all thats left is to show 
-that another problem in $NP$-complete polynomial reduces to the Longest path 
-problem.
-\subsection{Hamiltonian path}
-A Hamiltonian path problem - Determining if a Hamiltonian path:\\ 
-\textbf{A path which visits every node in a graph exactly once}\\ exists in a 
-graph, is a known $NP$-complete problem. It stands to show that the Hamiltonian 
-path problem polynomial reduces to the Longest path problem.
-\subsection{Reduction to Longest Path Problem}
-With any instance of the Hamiltonian path problem, an undirected graph of size 
-$n$, we can instead ask if a Longest path, of size $k\:=\:n-1$, exists.\\
-When we set $k$ to $n-1$ we are asserting that the Longest path
-problem is equal to a Hamiltonian path.
+Therefore, a simple path between two nodes $s,t\in V$ is the sequence of
+vertices ($v_1$,$v_2$,$v_3$,$....$,$v_k$) that satisfies these conditions:
 \pagebreak
-\subsection{Correctness}
-To prove our reduction we must show:\\
-\textbf{Correct decision version of Hamiltonian path $\Longleftrightarrow$ 
-\\Correct decision version of Longest Path}\\
-That is a instance of the Hamiltonian path problem exits if and only if a 
-Longest path, of $k\:=\:n-1$, exists. We will prove this in both directions 
-from the definitions. 
-\subsubsection{A Longest path exists}
+
 \begin{itemize}
-    \item If a Longest Path of size $k\;=n-1$ exists, there is a simple path 
-    that passes each node exactly once.
-    \item This simple path is a Hamiltonian path, as such if a Longest path does
-     not exist there cannot be a Hamiltonian path.
+    \item $s\:=v_1$ and $t\:=\:v_k$
+    \item Each consecutive nodes $\left(v_i,v_{i+1}\right)$ there is an edge
+          $e\:=\left(v_i,v_{i+1}\right)\:\in E$
+    \item No node appears more than once in the sequence.
 \end{itemize}
-\subsubsection{A Hamiltonian path exists}
-\begin{itemize}
-    \item If a Hamiltonian path exists, there is a simple path of length $n-1$
-    \item This is the maximum possible length of any simple path in the graph,
-    as such it is a Longest Path of size $k\:=\:n-1$.
-    \item If a Hamiltonian path does not exist it is impossible for a Longest 
-    path of $n-1$ to exist. Illustrated by a disconnected graph in $fig.2$
-\end{itemize}
+
+\subsection{Longest Simple Path and Decision Version}
+
+The figure below shows the longest simple path in blue, beginning in the upper
+left:
+
 \begin{figure}[!h]
-        \centering \tikzfig{tikz/DisconnectedGraph}
-        \caption{Graph without a Hamiltonian path, Longest path on right.}
-    \end{figure}
-Therefore we have proved our reduction is correct.
+    \centering \tikzfig{tikz/longestPathIntro}
+    \caption{Longest simple path}
+\end{figure}
+
+In the decision version of the Longest Path Problem, we input a graph $G$, and
+an integer $k$, and output a \textbf{yes or no} if a simplest path of
+\textbf{at least} length $k$ exists in the graph.
+
+\subsection{NP}
+
+A problem is in \verb|NP| if we can verify the solution in polynomial time, and
+if a corresponding certificate can be produced from the decision version of the
+Longest Path Problem. If we can verify this certificate in polynomial time, then
+the Longest Path Problem is in \verb|NP|. The certificate is a path of at least
+length $k$ with no duplicate nodes.
+
+To check that the path has no duplicate nodes we can iterate over each node in
+the path for every node, $O(k^2)$ complexity. To check the length of the path we
+just need to count each node and check it is greater than or equal to $k$, this
+operation has a $O(k)$ complexity.
+
+In some implementations, getting the length of a list is constant complexity
+$O(1)$. In most cases and the worst case we can check a certificate with is
+$O(n^2)$ complexity, therefore the Longest Path Problem is in \verb|NP|.
+
+% -------------------------------- NP-Complete ------------------------------- %
+\section{NP-Complete}
+
+If a problem, $X$, is in \verb|NP-Complete| and $X$ polynomially reduces to another
+problem $Y$ in \verb|NP|, then $Y$ is also in \verb|NP-Complete|.
+
+We have shown that the Longest Path Problem is in \verb|NP|, all that is left is
+to show that another problem in \verb|NP-Complete| polynomial reduces to the
+Longest Path Problem.
+
+\subsection{Hamiltonian Path}
+
+A \textbf{Hamiltonian path} is a sequence that visits each node \textbf{exactly}
+once. The \textbf{Hamiltonian Path Problem} is a known \verb|NP-Complete| problem that
+asks if a Hamiltonian path exists for a given graph.
+
+\subsection{Reduction to Longest Path Problem}
+
+With any instance of the Hamiltonian Path Problem of an undirected graph of size
+$n$, we can instead ask if a longest path of size $k\:=\:n-1$ exists.
+
+When we set $k$ to $n-1$, we are asserting that the longest path is equal to the
+Hamiltonian path.
+
+\subsection{Correctness}
+
+To prove our reduction we must show that:
+
+\begin{center}
+
+    Correct decision version of Hamiltonian path
+
+    $\updownarrow$
+
+    Correct decision version of Longest Path
+
+\end{center}
+
+That is, the instance of the Hamiltonian Path Problem exits only if a longest
+path of $k\:=\:n-1$ exists. We will prove this in both directions from the
+definitions.
+
+\subsubsection{A Longest Path Exists}
+
+\begin{itemize}
+    \item If a longest path of size $k\;=n-1$ exists, there is a simple path
+          that passes each node exactly once.
+    \item This simple path is a Hamiltonian path, and if a longest path does not
+          exist there cannot be a Hamiltonian path.
+\end{itemize}
+\pagebreak
+
+\subsubsection{A Hamiltonian Path Exists}
+
+\begin{itemize}
+    \item If a Hamiltonian path exists, there is a simple path of length $n-1$.
+    \item This is the maximum possible length of any simple path in the graph,
+          therefore it is a longest path of size $k\:=\:n-1$.
+    \item If a Hamiltonian path does not exist, it is impossible for a longest
+          path of $n-1$ to exist, illustrated by a disconnected graph in $fig.2$
+\end{itemize}
+
+\begin{figure}[!h]
+    \centering \tikzfig{tikz/DisconnectedGraph}
+    \caption{Graph without a Hamiltonian path, longest path on the right.}
+\end{figure}
+
+Therefore we have proved that our reduction is correct.
+
+% -------------------------------- Conclusion -------------------------------- %
 \section{Conclusion}
-We have shown that the decision version of any Longest path problem has a 
-certificate that is checked in polynomial time, therefore it is in $NP$. We also
-showed a reduction from a well known $NP-complete$ problem; Hamiltonian path
-problem, to the Longest path problem and proved the correctness of the reduction.
-As such we have proved that the Longest path problem is also $NP-complete$ 
-$\blacksquare$
+
+We have shown that the decision version of any Longest Path Problem has a
+certificate that is checked in polynomial time, therefore it is in \verb|NP|. We
+showed a reduction from the Hamiltonian Path Problem to the Longest Path
+Problem, and proved the correctness of the reduction. Therefore, we have proved
+that the Longest Path Problem is also \verb|NP-Complete| $\blacksquare$
+
 \end{document}
