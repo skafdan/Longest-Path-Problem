@@ -1,11 +1,11 @@
 \contentsline {section}{\numberline {1}Longest Path Problem}{1}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Simple Path}{1}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Longest Simple Path and Decision Version}{2}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.2}Longest Simple Path and Decision Version}{1}{subsection.1.2}%
 \contentsline {subsection}{\numberline {1.3}NP}{2}{subsection.1.3}%
 \contentsline {section}{\numberline {2}NP-Complete}{2}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Hamiltonian Path}{2}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Reduction to Longest Path Problem}{2}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Correctness}{3}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.3}Correctness}{2}{subsection.2.3}%
 \contentsline {subsubsection}{\numberline {2.3.1}A Longest Path Exists}{3}{subsubsection.2.3.1}%
 \contentsline {subsubsection}{\numberline {2.3.2}A Hamiltonian Path Exists}{3}{subsubsection.2.3.2}%
 \contentsline {section}{\numberline {3}Conclusion}{3}{section.3}%
