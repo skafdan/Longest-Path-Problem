@@ -1,0 +1,28 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=new style 0] (0) at (-1, 2) {};
+		\node [style=new style 0] (1) at (-1, 0) {};
+		\node [style=new style 0] (2) at (1, 0) {};
+		\node [style=new style 0] (3) at (1, 2) {};
+		\node [style=new style 0] (4) at (3, 2) {};
+		\node [style=new style 0] (5) at (3, 0) {};
+		\node [style=new style 0] (6) at (7, 2) {};
+		\node [style=new style 0] (8) at (9, 0) {};
+		\node [style=new style 0] (9) at (9, 2) {};
+		\node [style=new style 0] (10) at (11, 2) {};
+		\node [style=new style 0] (11) at (11, 0) {};
+		\node [style=new style 0] (12) at (7, 0) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [style=edge] (0) to (1);
+		\draw [style=edge] (1) to (3);
+		\draw [style=edge] (0) to (3);
+		\draw [style=edge] (3) to (2);
+		\draw [style=edge] (4) to (5);
+		\draw [style=path] (8) to (9);
+		\draw [style=path] (9) to (12);
+		\draw [style=path] (12) to (6);
+		\draw [style=edge] (6) to (9);
+		\draw [style=edge] (10) to (11);
+	\end{pgfonlayer}
+\end{tikzpicture}

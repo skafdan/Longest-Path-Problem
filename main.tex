@@ -80,8 +80,41 @@ We have shown that the Longest path problem is $NP$, all thats left is to show
 that another problem in $NP$-complete polynomial reduces to the Longest path 
 problem.
 \subsection{Hamiltonian path}
-A Hamiltonian path problem - Determining if a Hamiltonian path (a path which 
-visits every node in a graph once) exists in a graph, is a known $NP$-complete
-problem. It stands to show that the Hamiltonian path problem polynomial reduces 
-to the Longest path problem.
+A Hamiltonian path problem - Determining if a Hamiltonian path:\\ 
+\textbf{A path which visits every node in a graph exactly once}\\ exists in a 
+graph, is a known $NP$-complete problem. It stands to show that the Hamiltonian 
+path problem polynomial reduces to the Longest path problem.
+\subsection{Reduction to Longest Path Problem}
+With any instance of the Hamiltonian path problem, an undirected graph of size 
+$n$, we can instead ask if a Longest path, of size $k\:=\:n-1$, exists.\\
+When we set $k$ to $n-1$ we are asserting that the Longest path
+problem is equal to a Hamiltonian path.
+\pagebreak
+\subsection{Correctness}
+To prove our reduction we must show:\\
+\textbf{Correct decision version of Hamiltonian path $\Longleftrightarrow$ 
+\\Correct decision version of Longest Path}\\
+That is a instance of the Hamiltonian path problem exits if and only if a 
+Longest path, of $k\:=\:n-1$, exists. We will prove this in both directions 
+from the definitions. 
+\subsubsection{A Longest path exists}
+\begin{itemize}
+    \item If a Longest Path of size $k\;=n-1$ exists, there is a simple path 
+    that passes each node exactly once.
+    \item This simple path is a Hamiltonian path, as such if a Longest path does
+     not exist there cannot be a Hamiltonian path.
+\end{itemize}
+\subsubsection{A Hamiltonian path exists}
+\begin{itemize}
+    \item If a Hamiltonian path exists, there is a simple path of length $n-1$
+    \item This is the maximum possible length of any simple path in the graph,
+    as such it is a Longest Path of size $k\:=\:n-1$.
+    \item If a Hamiltonian path does not exist it is impossible for a Longest 
+    path of $n-1$ to exist. Illustrated by a disconnected graph in $fig.2$
+\end{itemize}
+\begin{figure}[!h]
+        \centering \tikzfig{tikz/DisconnectedGraph}
+        \caption{Graph without a Hamiltonian path, Longest path on right.}
+    \end{figure}
+Therefore we have proved our reduction is correct.
 \end{document}
